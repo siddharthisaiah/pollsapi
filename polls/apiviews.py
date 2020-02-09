@@ -46,7 +46,7 @@ class PollViewSet(viewsets.ModelViewSet):
 
         if not request.user == poll.created_by:
             raise PermissionDenied("You cannot delete this poll.")
-        return super()destroy(request, *args, **kwargs)
+        return super().destroy(request, *args, **kwargs)
 
 
 class ChoiceList(generics.ListCreateAPIView):
